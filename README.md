@@ -53,7 +53,8 @@ Prerequisites: Python 3.5+ and pip3 Note: (the user install dir is platform spec
 
 > Warning: Be sure to add the python bin dir to your $PATH
 
-If you are using windows use the ec2 template https://raw.githubusercontent.com/aws-quickstart/taskcat/master/installer/ec2/templates/taskcat.template
+If you are using windows:
+Use the ec2 template: https://raw.githubusercontent.com/aws-quickstart/taskcat/master/installer/ec2/templates/taskcat.template
 
 
 # Sample cfn-project
