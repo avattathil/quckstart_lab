@@ -45,3 +45,5 @@ x sample-taskcat-project/ci/debug-input.json
 x sample-taskcat-project/ci/taskcat-autobucket.yml
 x sample-taskcat-project/ci/taskcat.yml
 ```
+# Deploy the cfn
+`taskcat -c sample-taskcat-project/ci/taskcat-autobucket.yml -m -p -n`
