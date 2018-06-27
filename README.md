@@ -31,3 +31,17 @@ Download this tar https://s3.amazonaws.com/tonynv/sample-taskcat-project.tar
 
 `wget https://s3.amazonaws.com/tonynv/sample-taskcat-project.tar`
 
+# Untar files
+`tar -xvf sample-taskcat-project.tar`
+```
+x sample-taskcat-project/
+x sample-taskcat-project/ci/
+x sample-taskcat-project/scripts/
+x sample-taskcat-project/templates/
+x sample-taskcat-project/templates/debug-yaml.template
+x sample-taskcat-project/templates/debug.template
+x sample-taskcat-project/scripts/scripts_userdata.sh
+x sample-taskcat-project/ci/debug-input.json
+x sample-taskcat-project/ci/taskcat-autobucket.yml
+x sample-taskcat-project/ci/taskcat.yml
+```
