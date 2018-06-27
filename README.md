@@ -9,7 +9,7 @@ https://docs.aws.amazon.com/cli/latest/userguide/awscli-install-bundle.html
 ## Configuring the AWS CLI
 https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html#cli-quick-configuration
 
-## Test you configuration
+## Test your configuration (do a simple command)
 ` #aws s3 ls`
 ```
 2016-11-10 20:28:19 cf-templates-1cgvn8v7ihvbt-ap-northeast-2
@@ -24,6 +24,26 @@ https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html#c
 2016-11-10 20:24:30 cf-templates-1cgvn8v7ihvbt-us-east-2
 2016-03-23 19:25:57 cf-templates-1cgvn8v7ihvbt-us-west-1
 2016-04-06 21:06:00 cf-templates-1cgvn8v7ihvbt-us-west-2
+```
+
+# Sample cfn-project
+Download this tar https://s3.amazonaws.com/tonynv/sample-taskcat-project.tar
+
+`wget https://s3.amazonaws.com/tonynv/sample-taskcat-project.tar`
+
+# Untar files
+`tar -xvf sample-taskcat-project.tar`
+```
+x sample-taskcat-project/
+x sample-taskcat-project/ci/
+x sample-taskcat-project/scripts/
+x sample-taskcat-project/templates/
+x sample-taskcat-project/templates/debug-yaml.template
+x sample-taskcat-project/templates/debug.template
+x sample-taskcat-project/scripts/scripts_userdata.sh
+x sample-taskcat-project/ci/debug-input.json
+x sample-taskcat-project/ci/taskcat-autobucket.yml
+x sample-taskcat-project/ci/taskcat.yml
 ```
 
 # Install TaskCat
@@ -57,25 +77,7 @@ If you are using windows:
 Use the ec2 template: https://raw.githubusercontent.com/aws-quickstart/taskcat/master/installer/ec2/templates/taskcat.template
 
 
-# Sample cfn-project
-Download this tar https://s3.amazonaws.com/tonynv/sample-taskcat-project.tar
 
-`wget https://s3.amazonaws.com/tonynv/sample-taskcat-project.tar`
-
-# Untar files
-`tar -xvf sample-taskcat-project.tar`
-```
-x sample-taskcat-project/
-x sample-taskcat-project/ci/
-x sample-taskcat-project/scripts/
-x sample-taskcat-project/templates/
-x sample-taskcat-project/templates/debug-yaml.template
-x sample-taskcat-project/templates/debug.template
-x sample-taskcat-project/scripts/scripts_userdata.sh
-x sample-taskcat-project/ci/debug-input.json
-x sample-taskcat-project/ci/taskcat-autobucket.yml
-x sample-taskcat-project/ci/taskcat.yml
-```
 # Deploy the cfn
 `taskcat -c sample-taskcat-project/ci/taskcat-autobucket.yml -m -p -n`
 
