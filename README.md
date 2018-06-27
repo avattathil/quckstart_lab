@@ -26,6 +26,32 @@ https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html#c
 2016-04-06 21:06:00 cf-templates-1cgvn8v7ihvbt-us-west-2
 ```
 
+# Install TaskCat
+https://aws-quickstart.github.io/taskcat/#installing-taskcat
+
+Installing TaskCat (Docker install)
+Prerequisites: docker
+
+curl -s https://raw.githubusercontent.com/aws-quickstart/taskcat/master/installer/docker-install-master| sudo python -E
+> Note: If you do not have root privileges Taskcat will install in the current directory
+> Installing via pip3 (for those who do not want to use the docker installer)
+
+Prerequisites: Python 3.5+ and pip3
+
+`pip3 install taskcat`
+Installing via pip3 --user (for those who want to install taskcat into their homedir)
+
+Prerequisites: Python 3.5+ and pip3 Note: (the user install dir is platform specific)
+
+>For Example: (On Mac: ~/Library/Python/3.x/bin/taskcat)
+
+>For Example: (On Linux: ~/.local/bin)
+
+`pip3 install taskcat --user`
+Warning: Be sure to add the python bin dir to your $PATH
+
+
+
 # Sample cfn-project
 Download this tar https://s3.amazonaws.com/tonynv/sample-taskcat-project.tar
 
