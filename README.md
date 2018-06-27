@@ -47,3 +47,33 @@ x sample-taskcat-project/ci/taskcat.yml
 ```
 # Deploy the cfn
 `taskcat -c sample-taskcat-project/ci/taskcat-autobucket.yml -m -p -n`
+
+### Sample Output:
+```
+ _            _             _
+| |_ __ _ ___| | _____ __ _| |_
+| __/ _` / __| |/ / __/ _` | __|
+| || (_| \__ \   < (_| (_| | |_
+ \__\__,_|___/_|\_\___\__,_|\__|
+
+
+version 2018.627.21629
+
+
+[taskcat] :AWS AccountNumber: 	 [536065598225]
+[taskcat] :Authenticated via: 	 [environment]
+
+
+[taskcat] :Reading Config form: sample-taskcat-project/ci/taskcat-autobucket.yml
+[taskcat] |Queing test => taskcat-test1
+[INFO   ] :Creating bucket taskcat-tag-sample-taskcat-project-5d32eb7c in us-east-1
+[INFO   ] :Staging Bucket => [taskcat-tag-sample-taskcat-project-5d32eb7c]
+[INFO   ] :Multithread upload enabled, spawning 16 threads
+[S3: -> ] s3://taskcat-tag-sample-taskcat-project-5d32eb7c/sample-taskcat-project/ci/debug-input.json
+[S3: -> ] s3://taskcat-tag-sample-taskcat-project-5d32eb7c/sample-taskcat-project/ci/taskcat-autobucket.yml
+[S3: -> ] s3://taskcat-tag-sample-taskcat-project-5d32eb7c/sample-taskcat-project/ci/taskcat.yml
+[S3: -> ] s3://taskcat-tag-sample-taskcat-project-5d32eb7c/sample-taskcat-project/scripts/scripts_userdata.sh
+[S3: -> ] s3://taskcat-tag-sample-taskcat-project-5d32eb7c/sample-taskcat-project/templates/debug-yaml.template
+[S3: -> ] s3://taskcat-tag-sample-taskcat-project-5d32eb7c/sample-taskcat-project/templates/debug.template
+[taskcat] |Contents of S3 Bucket
+```
