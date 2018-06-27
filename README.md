@@ -26,5 +26,8 @@ https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html#c
 2016-04-06 21:06:00 cf-templates-1cgvn8v7ihvbt-us-west-2
 ```
 
-# Setting up taskcat for cfn development
+# Sample cfn-project
+Download this tar https://s3.amazonaws.com/tonynv/sample-taskcat-project.tar
+
+`wget https://s3.amazonaws.com/tonynv/sample-taskcat-project.tar`
 
