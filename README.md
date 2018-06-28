@@ -71,7 +71,7 @@ Prerequisites: Python 3.5+ and pip3 Note: (the user install dir is platform spec
 
 ## Docker based install
 
-> WARNING: Only use this method if you have docker instaled
+> WARNING: Only use this method if you have docker installed
 Prerequisites: `docker`
 
 curl -s https://raw.githubusercontent.com/aws-quickstart/taskcat/master/installer/docker-install-master| sudo python -E
@@ -87,7 +87,7 @@ Download this template https://raw.githubusercontent.com/aws-quickstart/taskcat/
 
 Connect via ssh to the instance as ec2-user. 
 
-> Note: You will need to create a role 
+> Note: You will need to create a role that can deploy cloudfromation stack and attach it to the instance
 
 # Check taskcat is installation (run taskcat)
 `taskcat`
