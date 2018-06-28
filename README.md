@@ -1,16 +1,19 @@
 # Setting up your AWS enviornment
 
-## Installing the AWS Command Line Interface
+## Installing the AWS Command Line Interface (if not installed)
 https://docs.aws.amazon.com/cli/latest/userguide/installing.html
 
 ## Install the AWS CLI Using the Bundled Installer (Linux, macOS, or Unix)
 https://docs.aws.amazon.com/cli/latest/userguide/awscli-install-bundle.html
 
-## Configuring the AWS CLI
+## Configuring the AWS CLI (if no default profile is configured)
 https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html#cli-quick-configuration
 
 ## Test your configuration (do a simple command)
 ` #aws s3 ls`
+
+> Should return something similar if you have your default profile set
+
 ```
 2016-11-10 20:28:19 cf-templates-1cgvn8v7ihvbt-ap-northeast-2
 2016-11-10 20:29:47 cf-templates-1cgvn8v7ihvbt-ap-south-1
@@ -47,15 +50,8 @@ x sample-taskcat-project/ci/taskcat.yml
 ```
 
 # Install TaskCat
-https://aws-quickstart.github.io/taskcat/#installing-taskcat
 
 ## Installing TaskCat (Docker install)
-Prerequisites: `docker`
-
-curl -s https://raw.githubusercontent.com/aws-quickstart/taskcat/master/installer/docker-install-master| sudo python -E
-
-> Note: If you do not have root privileges Taskcat will install in the current directory
-> Installing via pip3 (for those who do not want to use the docker installer)
 
 Prerequisites: Python 3.5+ and pip3
 
@@ -71,14 +67,34 @@ Prerequisites: Python 3.5+ and pip3 Note: (the user install dir is platform spec
 
 `pip3 install taskcat --user`
 
-> Warning: Be sure to add the python bin dir to your $PATH
+> WARNING: Be sure to add the python bin dir to your $PATH
 
-If you are using windows:
-Use the ec2 template: https://raw.githubusercontent.com/aws-quickstart/taskcat/master/installer/ec2/templates/taskcat.template
+## Docker based install
+
+> WARNING: Only use this method if you have docker instaled
+Prerequisites: `docker`
+
+curl -s https://raw.githubusercontent.com/aws-quickstart/taskcat/master/installer/docker-install-master| sudo python -E
+
+> Note: If you do not have root privileges Taskcat will install in the current directory
+> Installing via pip3 (for those who do not want to use the docker installer)
+
+## Cloudformation based install
+
+If you are using a Windows workstation use the ec2 template: 
+
+Download this template https://raw.githubusercontent.com/aws-quickstart/taskcat/master/installer/ec2/templates/taskcat.template and launch it.
+
+Connect via ssh to the instance as ec2-user. 
+
+> Note: You will need to create a role 
+
+# Check taskcat is installation (run taskcat)
+`taskcat`
+> This should return the useage/help message
 
 
-
-# Deploy the cfn
+# Deploy the sample cfn
 `taskcat -c sample-taskcat-project/ci/taskcat-autobucket.yml -m -p -n`
 
 ### Sample Output:
@@ -89,13 +105,10 @@ Use the ec2 template: https://raw.githubusercontent.com/aws-quickstart/taskcat/m
 | || (_| \__ \   < (_| (_| | |_
  \__\__,_|___/_|\_\___\__,_|\__|
 
-
 version 2018.627.21629
-
 
 [taskcat] :AWS AccountNumber: 	 [536065598225]
 [taskcat] :Authenticated via: 	 [environment]
-
 
 [taskcat] :Reading Config form: sample-taskcat-project/ci/taskcat-autobucket.yml
 [taskcat] |Queing test => taskcat-test1
