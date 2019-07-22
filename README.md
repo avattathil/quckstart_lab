@@ -95,7 +95,7 @@ Connect via ssh to the instance as ec2-user.
 
 
 # Deploy the sample cfn
-`taskcat -c sample-taskcat-project/ci/taskcat-autobucket.yml -m -p -n`
+`taskcat -c sample-taskcat-project/ci/taskcat-autobucket.yml`
 
 ### Sample Output:
 ```
